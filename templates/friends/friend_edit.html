@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form method='POST' action='/friends/add_friend'>
+<form method='POST' action='/friends/{{ post._id }}'>
     <fieldset>
     <legend>{{ title }}</legend>
     {% include '/partials/post_form.html' %}
