@@ -5,14 +5,16 @@
 <h1>Title</h1>
 
 <h2> Let's become a friend! </h2>
-<a href="/friends/new">Add Post</a></br>
+<a href="/friends/new">Add Post</a><br>
+{% set count = namespace(value=1) %}
 {% for post in posts %}
-    <a href="/friends/{{ post._id }}">
-    <small>Post num: post number </small>
-    <small>Nickname: {{ post.nickname }}</small>
-    <h2>{{ post.title }}</h2>
+    <br><a href="/friends/{{ post._id }}">
+    <small>Post num: {{ count.value }}</small><br>
+    <small>Nickname: {{ post.nickname }}</small><br>
+    <small>Post title:{{ post.title }}</small><br>
     <small>Posted on: post date </small><br>
-    </a>
+    </a><br>
+    {% set count.value = count.value + 1 %}
 {% endfor %}
 
 {% endblock %}

@@ -49,3 +49,8 @@ def friend_update(post_id):
         {'_id': ObjectId(post_id)},
         {'$set': updated_post})
     return redirect(url_for('friend.friend_show', post_id=post_id))
+
+@friend.route('/<post_id>/delete', methods=['POST'])
+def friend_delete(post_id):
+    posts.delete_one({'_id': ObjectId(post_id)})
+    return redirect(url_for('friend.friends_index'))
