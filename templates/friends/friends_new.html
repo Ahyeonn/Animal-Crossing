@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method='POST' action='/friends/add_friend'>
+    <fieldset>
+    <legend>Add Friend Post</legend>
+    <p>
+        <label>Nickname</label><br>
+        <input type='text' name='nickname' />
+    </p>
+    <p>
+        <label>Friend Code</label><br>
+        <input type='text' name='friendcode' />
+    </p>
+    <p>
+        <label>Title</label><br>
+        <input type='text' name='title' />
+    </p>
+    <p>
+        <label>Description</label><br>
+        <input type='text' name='description' />
+    </p>
+    </fieldset>
+
+    <p>
+        <button type='submit'>Save Post</button>
+    </p>
+</form>
+{% endblock %}
