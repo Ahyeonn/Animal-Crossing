@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="/friends">Back to Home</a>
+<h1> Title: {{ post.title }} </h1>
+<h2> Description: {{ post.description }}</h2>
+<small>Nickname: {{ post.nickname }}</small>
+<small>Friend Code:{{ post.friendcode }}</small>
+{% endblock %}
