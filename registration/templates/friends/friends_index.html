@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{# This is going to be a page to share friend-code #}
+<h1>Title</h1>
+
+<h2> Let's become a friend! </h2>
+{% for post in posts %}
+    <small>Post num: {{ post.number }}</small>
+    <h2>{{ post.title }}</h2>
+    <small>Posted on: {{ post.date }}</small>
+{% endfor %}
+
+{% endblock %}
+
