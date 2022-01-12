@@ -1,3 +1,5 @@
 <div>
     <p class='card-title'>{{ comment.comment }}</p>
+    <form action='/friends/comments/{{ comment._id }}' method='POST'><button type="submit">Delete</button>
+    <input type='hidden' value='{{ post._id }}' name='post_id'/></form>
 </div>
