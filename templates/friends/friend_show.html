@@ -10,5 +10,9 @@
 <p><form method="POST" action="/friends/{{ post._id }}/delete"><button type="submit">Delete</button></form></p>
 
 {% include 'partials/comment_form.html' %}
+{% for comment in comments %}
+    {% include 'partials/comment.html' %}
+{% endfor %}
+
 
 {% endblock %}

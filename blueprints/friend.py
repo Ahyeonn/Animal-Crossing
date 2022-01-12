@@ -32,7 +32,8 @@ def friend_submit():
 @friend.route('/<post_id>')
 def friend_show(post_id):
     post = posts.find_one({'_id': ObjectId(post_id)})
-    return render_template('/friends/friend_show.html', post=post)
+    post_comments = comments.find({'post_id': ObjectId(post_id)})
+    return render_template('/friends/friend_show.html', post=post, comments=post_comments)
 
 @friend.route('/<post_id>/edit')
 def friend_edit(post_id):
@@ -56,3 +57,4 @@ def friend_update(post_id):
 def friend_delete(post_id):
     posts.delete_one({'_id': ObjectId(post_id)})
     return redirect(url_for('friend.friends_index'))
+

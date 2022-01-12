@@ -1,4 +1,5 @@
-<form>
+<form action='/friends/comment' method='POST'>
+    <input type='hidden' value='{{ post._id }}' name='post_id'/>
     <fieldset>
         <legend>Add a Comment</legend>
 
@@ -9,7 +10,7 @@
                 placeholder='Leave a comment...'></textarea>
         </p>
     </fieldset>
-<p>
-    <button type='submit'>Save Comment</button>
-</p>
+    <p>
+        <button type='submit'>Save Comment</button>
+    </p>
 </form>
