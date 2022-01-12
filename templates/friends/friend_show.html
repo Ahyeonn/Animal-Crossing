@@ -6,6 +6,9 @@
 <small>Friend Code:{{ post.friendcode }}</small>
 <h1> Title: {{ post.title }} </h1>
 <h2> Description: {{ post.description }}</h2>
-<a href="/friends/{{ post._id }}/edit">Edit</a>
-<p><form method="POST" action="/friends/{{ post._id }}/delete"><button>Delete</button></form></p>
+<a href="/friends/{{ post._id }}/edit"><button>Edit</button></a>
+<p><form method="POST" action="/friends/{{ post._id }}/delete"><button type="submit">Delete</button></form></p>
+
+{% include 'partials/comment_form.html' %}
+
 {% endblock %}

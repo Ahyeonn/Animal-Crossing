@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, redirect, url_for
 from bson.objectid import ObjectId
 from extensions import *
+from datetime import datetime
 
 friend = Blueprint('friend', __name__, url_prefix="/friends")
 
@@ -22,7 +23,8 @@ def friend_submit():
         'nickname': request.form.get('nickname'),
         'friendcode': request.form.get('friendcode'),
         'title': request.form.get('title'),
-        'description': request.form.get('description')
+        'description': request.form.get('description'),
+        'datetime': datetime.now().strftime("%G-%m-%d")
     }
     posts.insert_one(post)
     return redirect(url_for('friend.friend_show', post_id=post['_id']))

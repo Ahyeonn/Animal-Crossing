@@ -12,7 +12,7 @@
     <small>Post num: {{ count.value }}</small><br>
     <small>Nickname: {{ post.nickname }}</small><br>
     <small>Post title:{{ post.title }}</small><br>
-    <small>Posted on: post date </small><br>
+    <small>Posted on: {{ post.datetime }} </small><br>
     </a><br>
     {% set count.value = count.value + 1 %}
 {% endfor %}
