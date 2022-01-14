@@ -1,9 +1,28 @@
 {% extends 'base.html' %}
-
+{% block css %}<link rel="stylesheet" type="text/css" href="/static/css/form_edit.css">
+{% endblock %}
 {% block content %}
+<div class="navbar-all">
+	<nav>
+		<ul>
+			<li><a class="ms-5"href="/main">Home</a></li>
+			<li><a class="ms-2 me-5"href="/friends">Friend-Code</a></li>
+			<li><a class="me-5"href="/main/shopping">Store</a></li>
+		</ul>
+	</nav>
+    <div class="user_display">
+		<p class="user-name">Hi {{ session.username }}</p>
+		<img src="/static/images/hi.jpg">
+		<a href="/login/logout" class="logout">Logout</a>
+	</div>
+</div>
 <form method='POST' action='/friends/{{ post._id }}'>
-    <fieldset>
-    <legend>{{ title }}</legend>
+    <div class="forbanner mt-5">
+        <img class='banner' width="500px" src="/static/images/greeting.png">
+        <div class="clouds">
+            <h1>{{ title }}</h1>
+        </div>
+    </div>
     {% include '/partials/post_form.html' %}
 </form>
 {% endblock %}

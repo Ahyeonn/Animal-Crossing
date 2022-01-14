@@ -1,5 +1,25 @@
 {% extends 'base.html' %}
-
+{% block css %}<link rel="stylesheet" type="text/css" href="/static/css/home.css">
+{% endblock %}
 {% block content %}
-hi everyone this is going to be my main page
+<div class="navbar-all">
+	<nav>
+		<ul>
+			<li><a class="ms-5"href="/main">Home</a></li>
+			<li><a class="ms-2 me-5"href="/friends">Friend-Code</a></li>
+			<li><a class="me-5"href="/main/shopping">Store</a></li>
+		</ul>
+	</nav>
+    <div class="user_display">
+		<p class="user-name">Hi {{ session.username }}</p>
+		<img src="/static/images/hi.jpg">
+		<a href="/logout" class="logout">Logout</a>
+	</div>
+</div>
+<div class='image my-5'></div>
+
+<h1>Animal Crossing Trailer</h1>
+<div class="locate2 py-5 mb-5">
+    <iframe width="1100px" height="500px" src="https://www.youtube.com/embed/_3YNL0OWio0"></iframe>
+</div>
 {% endblock %}

@@ -1,4 +1,8 @@
-<div>
+<div class="pt-2 box">
+    <div class="d-flex ms-5 me-5 align-items-center">
+        <label>Annonymous</label><br>
+        <img width="50px" src="/static/images/user2.jpg">
+    </div>
     <p class='card-title'>{{ comment.comment }}</p>
     <form action='/friends/comments/{{ comment._id }}' method='POST'><button type="submit">Delete</button>
     <input type='hidden' value='{{ post._id }}' name='post_id'/></form>

@@ -1,21 +1,53 @@
 {% extends 'base.html' %}
-
+{% block css %}<link rel="stylesheet" type="text/css" href="/static/css/friend.css">
+{% endblock %}
 {% block content %}
-{# This is going to be a page to share friend-code #}
-<h1>Title</h1>
-
-<h2> Let's become a friend! </h2>
-<a href="/friends/new">Add Post</a><br>
-{% set count = namespace(value=1) %}
-{% for post in posts %}
-    <br><a href="/friends/{{ post._id }}">
-    <small>Post num: {{ count.value }}</small><br>
-    <small>Nickname: {{ post.nickname }}</small><br>
-    <small>Post title:{{ post.title }}</small><br>
-    <small>Posted on: {{ post.datetime }} </small><br>
-    </a><br>
-    {% set count.value = count.value + 1 %}
-{% endfor %}
-
+<div class="navbar-all">
+	<nav>
+		<ul>
+			<li><a class="ms-5"href="/main">Home</a></li>
+			<li><a class="ms-2 me-5"href="/friends">Friend-Code</a></li>
+			<li><a class="me-5"href="/main/shopping">Store</a></li>
+		</ul>
+	</nav>
+    <div class="user_display">
+		<p class="user-name">Hi {{ session.username }}</p>
+		<img src="/static/images/hi.jpg">
+		<a href="/logout" class="logout">Logout</a>
+	</div>
+</div>
+<section class="postbox pb-5">
+    <div class="posts">
+        <a class="forposts" href="/friends/new">Add Post</a><br>
+        <div class="d-flex justify-content-center">
+            <div class="bgpost">
+                <h2> Share Friend Code </h2>
+            </div>
+        </div>
+            {% set count = namespace(value=1) %}
+        
+        <div class="d-flex justify-content-center pb-5">
+            <div class="one_post d-flex align-items-center flex-column">
+            <div class="header d-flex justify-content-center">
+                <small>POST NUMBER</small>
+                <small>NICKNAME</small>
+                <small>TITLE</small>
+                <small>CREATED ON</small>
+            </div>
+            {% for post in posts %}
+                <div class="wholepost">
+                    <br><a href="/friends/{{ post._id }}">
+                    <small class="single-post">{{ count.value }}</small><br>
+                    <small class="single-post">{{ post.nickname }}</small><br>
+                    <small class="single-post">{{ post.title }}</small><br>
+                    <small class="single-post">{{ post.datetime }} </small><br>
+                    </a><br>
+                    {% set count.value = count.value + 1 %}
+                </div>
+            {% endfor %}
+        </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
 

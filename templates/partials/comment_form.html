@@ -1,17 +1,20 @@
-<form action='/friends/comments' method='POST'>
+<form class="form" action='/friends/comments' method='POST'>
     <input type='hidden' value='{{ post._id }}' name='post_id'/>
-    <fieldset>
-        <legend>Add a Comment</legend>
-
-        <p>
-            <label>Friend</label><br>
-            <textarea required 
-                name='comment'
-                rows='5'
-                placeholder='Leave a comment...'></textarea>
-        </p>
-    </fieldset>
-    <p>
-        <button type='submit'>Save Comment</button>
-    </p>
+    <div class="group">
+        <fieldset>
+            <div class="d-flex ms-5 me-5 align-items-center">
+                <label>Annonymous</label><br>
+                <img width="50px" src="/static/images/profile.jpg">
+            </div>
+        </fieldset>
+        <div class="textbox">
+            <p>
+                <textarea required 
+                    name='comment'
+                    rows='1'
+                    placeholder='Leave a comment...'></textarea>
+            </p>
+            <button type='submit'>Save Comment</button>
+        </div>
+    </div>
 </form>

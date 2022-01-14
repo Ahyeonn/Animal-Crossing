@@ -1,18 +1,67 @@
 {% extends 'base.html' %}
-
+{% block css %}<link rel="stylesheet" type="text/css" href="/static/css/form_show.css">
+<link rel="stylesheet" type="text/css" href="/static/css/comment_form.css">
+{% endblock %}
 {% block content %}
-<a href="/friends">Back to Home</a><br>
-<small>Nickname: {{ post.nickname }}</small>
-<small>Friend Code:{{ post.friendcode }}</small>
-<h1> Title: {{ post.title }} </h1>
-<h2> Description: {{ post.description }}</h2>
-<a href="/friends/{{ post._id }}/edit"><button>Edit</button></a>
-<p><form method="POST" action="/friends/{{ post._id }}/delete"><button type="submit">Delete</button></form></p>
+<div class="navbar-all">
+	<nav>
+		<ul>
+			<li><a class="ms-5"href="/main">Home</a></li>
+			<li><a class="ms-2 me-5"href="/friends">Friend-Code</a></li>
+			<li><a class="me-5"href="/main/shopping">Store</a></li>
+		</ul>
+	</nav>
+    <div class="user_display">
+		<p class="user-name">Hi {{ session.username }}</p>
+		<img src="/static/images/hi.jpg">
+		<a href="/logout" class="logout">Logout</a>
+	</div>
+</div>
+<a class="forback" href="/friends">BACK</a><br>
+<div class="d-flex justify-content-center">
+    <div class="show">
+        <div class="user">
+            <img width="75%" src="/static/images/character.jpg">
+        </div>
+        <div>
+            <div class="smalldiv">
+                <div class="small mt-3">
+                    <p id="big">Nickname: </p>
+                    <p>{{ post.nickname }}</p>
+                </div>
+                <div class="small">
+                    <p id="big2">Friend Code: </p>
+                    <p>{{ post.friendcode }}</p>
+                </div>
+                <div class="small">
+                    <p id="big3">Title: </p>
+                    <p>{{ post.title }} </p>
+                </div>
+                <div class="small">
+                    <p id="big4">Description: </p>
+                    <textarea readonly id="fordescription">{{ post.description }}</textarea>
+                </div>
+                <div class="forbutton">
+                    <a href="/friends/{{ post._id }}/edit"><button class="forbuttons">Edit</button></a>
+                    <p><form method="POST" action="/friends/{{ post._id }}/delete"><button class="forbuttons" type="submit">Delete</button></form></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="together pb-5">
+    <div class="all">
+        <div class="comment">
+        {% include 'partials/comment_form.html' %}
+        </div>
+        <div class="comments py-4">
+        {% for comment in comments %}
+            {% include 'partials/comment.html' %}
+        {% endfor %}
+        </div>
+    </div>
+</section>    
 
-{% include 'partials/comment_form.html' %}
-{% for comment in comments %}
-    {% include 'partials/comment.html' %}
-{% endfor %}
 
 
 {% endblock %}

@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% block css %}<link rel="stylesheet" type="text/css" href="/static/css/shopping.css">
+{% endblock %}
+{% block content %}
+<div class="navbar-all">
+	<nav>
+		<ul>
+			<li><a class="ms-5"href="/main">Home</a></li>
+			<li><a class="ms-2 me-5"href="/friends">Friend-Code</a></li>
+			<li><a class="me-5"href="/main/shopping">Store</a></li>
+		</ul>
+	</nav>
+	<div class="user_display">
+		<p class="user-name">Hi {{ session.username }}</p>
+		<img src="/static/images/hi.jpg">
+		<a href="/logout" class="logout">Logout</a>
+	</div>
+</div>
+<h1><i class="fa fa-shopping-cart"></i></h1>
+	<section>
+		<div class="item">
+			<img src="/static/images/isabelle.jpg">
+			<p>Isabelle Amiibo Card</p>
+			<h6>$14.89</h6>
+			<span></span>
+			<button>Add-cart</button>
+		</div>
+		
+		<div class="item">
+			<img src="/static/images/timmy.jpg">
+			<p>Timmy Amiibo Card</p>
+			<h6>$3.45</h6>
+			<span></span>
+			<button>Add-cart</button>
+		</div>
+		<div class="item">
+			<img src="/static/images/joan.jpg">
+			<p>Joan Amiibo Card</p>
+			<h6>$3.99</h6>
+			<span></span>
+			<button>Add-cart</button>
+		</div>
+		<div class="item">
+			<img src="/static/images/red.jpg">
+			<p>Redd Amiibo Card</p>
+			<h6>$8.55</h6>
+			<span></span>
+			<button>Add-cart</button>
+		</div>
+	</section>
+	<section>
+		<div class="item">
+			<img src="/static/images/fauna.jpg">
+			<p>Fauna Amiibo Card</p>
+			<h6>$6.29</h6>
+			<span></span>
+			<button>Add-cart</button>
+		</div>
+		<div class="item">
+			<img src="/static/images/djkk.jpg">
+			<p>DJ KK Amiibo Card</p>
+			<h6>$10.97</h6>
+			<span></span>
+			<button>Add-cart</button>
+		</div>
+		<div class="item">
+			<img src="/static/images/tomnook.jpg">
+			<p>Tom Nook Amiibo Card</p>
+			<h6>$4.25</h6>
+			<span></span>
+			<button>Add-cart</button>
+		</div>
+		<div class="item">
+			<img src="/static/images/sable.jpg">
+			<p>Sable Amibbo Card</p>
+			<h6>$11.45</h6>
+			<span></span>
+			<button>Add-cart</button>
+		</div>
+	</section>
+	<section>
+		<div class="item">
+			<img src="/static/images/saharah.jpg">
+			<p>Saharah Amiibo Card</p>
+			<h6>$12.95</h6>
+			<span></span>
+			<button>Add-cart</button>
+		</div>
+		<div class="item">
+			<img src="/static/images/cheri.jpg">
+			<p>Cheri Amiibo Card</p>
+			<h6>$13.65</h6>
+			<span></span>
+			<button>Add-cart</button>
+		</div>
+		<div class="item">
+			<img src="/static/images/harriet.jpg">
+			<p>Harriet Amiibo Card</p>
+			<h6>$8.29</h6>
+			<span></span>
+			<button>Add-cart</button>
+		</div>
+		<div class="item">
+			<img src="/static/images/lottie.jpg">
+			<p>Lottie Amiibo Card</p>
+			<h6>$4.25</h6>
+			<span></span>
+			<button>Add-cart</button>
+		</div>
+	</section>
+
+	<div class="select">
+		<input type="button" class="ordernow" onclick="myFunction()" value="Order-now">
+		<p class="msg"id="demo"></p>
+	</div>
+{% endblock %}

@@ -1,0 +1,88 @@
+a{
+    text-decoration: none;
+    padding: 5px 15px;
+    border-width: 1px;
+    margin: 0px 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    padding-top: 15px;
+}
+ul a{
+    background-color: white;
+    color: rgb(85, 84, 84);
+    border: none;
+    font-size: 20px;
+    width: 150px;
+    padding-top: 10px;
+
+}
+.navbar-all{
+    display: flex;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: rgb(216, 166, 112);
+    align-items: center;
+}
+a:hover{
+    color: rgb(173, 93, 93);
+}
+
+h2{
+    text-align: center;
+    width: 75%;
+    font-weight: lighter;
+    font-size: 37px;
+}
+.forh2{
+    padding: 190px;
+    margin: 20px 0px;
+    justify-content: start;
+    background-image: url(/static/images/AC_background.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+label{
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+button{
+    margin-top: 30px;
+    width: 100px;
+}
+
+.create-acc {
+    text-decoration: none;
+    color: rgb(87, 158, 189);
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.flashes{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons{
+    background-color: rgb(81, 180, 245);
+    color: white;
+}
+
+.btn:hover {
+    color: white;
+}

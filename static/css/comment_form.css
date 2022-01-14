@@ -1,0 +1,97 @@
+.comment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.comments{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.all {
+    border: solid;
+    border-color: grey;
+    border-radius: 30px;
+    border-width: 3px;
+    width: 1200px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.together{
+    padding-top: 50px;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+
+.group{
+    display: flex;
+}
+label{
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 10px;
+    color: gray;
+}
+.group img{
+    border-radius: 30px;
+}
+.textbox{
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    justify-content: space-between;
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    border-bottom: solid;
+    padding-bottom: 15px;
+    border-width: 1px;
+    width: 90%;
+    border-color: gr;
+}
+textarea{
+    width: 300px;
+    border: solid;
+    border-color: gray;
+    border-width: 2px;
+    text-align: center;
+    border-radius: 10px;
+}
+button{
+    background-color: orange;
+    color: white;
+    border-radius: 30px;
+    border-color: white;
+    border: solid;
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    width: 800px;
+}
+
+.box p{
+    padding-right: 3px;
+    width: 100%;
+    font-weight: lighter;
+    font-size: 30px;
+    color: rgb(132, 132, 135);
+}
+.box button{
+    width: 100px;
+    margin-left: 50px;
+}

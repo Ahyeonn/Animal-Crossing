@@ -1,22 +1,26 @@
-<p>
-    <label>Nickname</label><br>
-    <input type='text' name='nickname' value="{{ post.nickname }}" required/>
-</p>
-<p>
-    <label>Friend Code</label><br>
-    <input type='text' name='friendcode' value="{{ post.friendcode }}" required/>
-</p>
-<p>
-    <label>Title</label><br>
-    <input type='text' name='title' value="{{ post.title }}" required/>
-</p>
-<p>
-    <label>Description</label><br>
-    <input type='text' name='description' value="{{ post.description }}" required/>
-</p>
-</fieldset>
+<div class="form mt-5">
+    <div class="forminside">
+        <img class="m-0 isabelle" width="150px" src="/static/images/greeting.jpg">
+        <p>
+            <label>NICKNAME</label>
+            <input type='text' name='nickname' value="{{ post.nickname }}" required/>
+        </p>
+        <p>
+            <label>FRIEND CODE</label>
+            <input type='text' name='friendcode' value="{{ post.friendcode }}" required/>
+        </p>
+        <p>
+            <label>TITLE</label>
+            <input type='text' name='title' value="{{ post.title }}" required/>
+        </p>
+        <p>
+            <label>DESCRIPTION</label>
+            <input type='text' name='description' value="{{ post.description }}" required/>
+        </p>
+        </fieldset>
 
-<p>
-    <button type='submit'>Save Post</button>
-</p>
-<a href="/friends/{{ post._id }}"><button>Cancel</button></a>
+        <p>
+            <button type='submit'>Save Post</button>
+        </p>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block css %}<link rel="stylesheet" type="text/css" href="/static/css/login.css">
+{% endblock %}
+{% block content %}
+<div class="navbar-all">
+	<nav>
+		<ul>
+			<li><a class="ms-5"href="/">Home</a></li>
+			<li><a class="ms-2 me-5"href="/">Friend-Code</a></li>
+			<li><a class="me-5"href="/">Store</a></li>
+		</ul>
+	</nav>
+</div>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+  <ul class="flashes">
+  {% for message in messages %}
+    <li class="fs-3 text-primary">{{ message }}</li>
+  {% endfor %}
+  </ul>
+{% endif %}
+{% endwith %}
+<div class="forh2">
+    <h2>Sign up with us to explore our website</h2>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="w-50">
+            <form method=POST action="{{ url_for('login.register') }}">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Username</label>
+                    <input type="text" class="form-control" name="username" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" name="pass" placeholder="Password" required>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-block buttons">Register</button>
+                </div>
+            </form>
+            <br>
+            <div class="pb-5 d-flex justify-content-end ">
+                <a class="create-acc" href="{{ url_for('login.index') }}">Already have an account?</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
