@@ -1,4 +1,4 @@
-#!/Users/ahyeon/Documents/AC-Website/env/bin/python3
+#!/Users/ahyeonjeon/Documents/Animal-Crossing/env/bin/python3.10
 # -*- coding: utf-8 -*-
 import re
 import sys
